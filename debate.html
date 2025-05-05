@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debate Platform</title>
+    <link rel="stylesheet" href="deb.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <button
+          id="addtopic"
+          type="button"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <input type="text" placeholder="Search hear" class="Search" />
+        <i class="fa-solid fa-circle-user"></i>
+      </div>
+    </header>
+
+    <div class="main-page">
+      <div class="debattes">
+        <section class="debate-topics">
+          <h2>Popular Debate Topics</h2>
+          <ul class="topic">
+            <!-- New topics will appear here -->
+          </ul>
+        </section>
+      </div>
+
+      <div id="chat">
+        <div class="chat-container">
+          <div class="chat-header">
+            <h2>Chat Room</h2>
+          </div>
+
+          <div class="chat-box" id="chatBox">
+            <!-- Chat messages will be displayed here -->
+            <h2>Welcome to the Debate</h2>
+          </div>
+
+          <div class="chat-input">
+            <input
+              type="text"
+              id="messageInput"
+              placeholder="Type your message..."
+              autocomplete="on"
+            />
+            <button id="sendMessage" type="">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

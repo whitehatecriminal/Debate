@@ -51,23 +51,33 @@ document.getElementById("addtopic").addEventListener("click", function () {
   window.location.href = "topics.html";
 });
 
-document.addEventListener("DOMContentLoaded", function () { //  Waits until the HTML page is fully loaded before running the code inside
-  // taking data from local storage
-  const debatData = JSON.parse(localStorage.getItem("debat"));
-  
-  // Checks if the retrieved data is a valid array. If yes we proceed to display the topics.
-  if (Array.isArray(debatData)) { 
-    //Finds the HTML element with the class "topic" — this is where the debate topics will be added.
+let debatData = [];
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Load debate data from localStorage
+  debatData = JSON.parse(localStorage.getItem("debat"));
+
+  if (Array.isArray(debatData)) {
     const topicContainer = document.querySelector(".topic");
 
-    debatData.forEach(topic => { // accing each array element
+    debatData.forEach((topic, index) => {
       const newListItem = document.createElement("li");
 
       const h3 = document.createElement("h3");
       const a = document.createElement("a");
-      a.href = "debate.html"; // Can change if needed
-      // anchor pe title set
+      // a.href = "debate.html";
       a.textContent = topic.title;
+
+      // Optional: Set id if you want to access this later
+      a.id = `topic-${index}`;
+
+      // Click event to store index and title
+      a.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent immediate navigation
+        localStorage.setItem("selectedDebateIndex", index);
+        window.location.href = "debate.html";
+      });
+
       h3.appendChild(a);
 
       const p = document.createElement("p");
@@ -81,3 +91,12 @@ document.addEventListener("DOMContentLoaded", function () { //  Waits until the 
   }
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const index = localStorage.getItem("selectedDebateIndex");
+  const debatData = JSON.parse(localStorage.getItem("debat"));
+
+  if (debatData && debatData[index]) {
+    document.getElementById("welcomtopic").innerHTML = `Wlecome to ${debatData[index].title}`;
+  }
+});

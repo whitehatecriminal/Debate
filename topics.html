@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Topic</title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="" onsubmit="return false;">
-        <label for="topicTitle">Topic Title</label>
-        <input type="text" id="title" name="topicTitle" required placeholder="Enter title here">
-        
-        <label for="description">Add Description</label>
-        <textarea type="text" id="description" name="description" required placeholder="give about the title"></textarea>
-        
-        <button type="button" onclick="redirectToDebatePage()" id="cre"> create </button>
-      </form>
-      <script src="topics.js"></script>
-</body>
+      <label for="topicTitle">Topic Title</label>
+      <input
+        type="text"
+        id="title"
+        name="topicTitle"
+        required
+        placeholder="Enter title here"
+      />
+
+      <label for="description">Add Description</label>
+      <textarea
+        type="text"
+        id="description"
+        name="description"
+        required
+        placeholder="give about the title"
+      ></textarea>
+
+      <button type="button" onclick="redirectToDebatePage()" id="cre">
+        create
+      </button>
+    </form>
+    <script src="topics.js"></script>
+  </body>
 </html>

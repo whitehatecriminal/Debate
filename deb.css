@@ -136,10 +136,10 @@ input[type="search"] {
 
 /* Chat Section Styles */
 #chat {
-  margin: 2px 50px;
-  position: relative;
-  top: 0;
-  left: 0;
+  margin: 2px 50px; /* You might want to adjust or remove horizontal margins */
+  position: fixed;
+  top: 10%; /* Adjust top as needed */
+  right: 0; /* Anchor to the right edge */
   background-color: #f4f4f9;
   width: 350px;
   height: auto;

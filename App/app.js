@@ -65,7 +65,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const h3 = document.createElement("h3");
       const a = document.createElement("a");
-      // a.href = "debate.html";
+      const menu = document.createElement('img')
+      menu.id = 'topicedt'
+      menu.src = 'src/img/dot-men.svg'
+      // menu.width = '16px';
+      menu.alt = 'edt'
+
       a.textContent = topic.title;
 
       // Optional: Set id if you want to access this later
@@ -79,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       h3.appendChild(a);
+      h3.appendChild(menu); //append image to the array index
 
       const p = document.createElement("p");
       p.textContent = topic.description;
@@ -97,6 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const debatData = JSON.parse(localStorage.getItem("debat"));
 
   if (debatData && debatData[index]) {
-    document.getElementById("welcomtopic").innerHTML = `Wlecome to ${debatData[index].title}`;
+    document.getElementById("welcomtopic").innerHTML = `Welcome to ${debatData[index].title}`;
   }
 });

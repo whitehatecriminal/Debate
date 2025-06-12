@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Debate Platform</title>
     <link rel="stylesheet" href="deb.css" />
+    <link rel="stylesheet" href="./profile.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -20,7 +21,17 @@
           <i class="fa-solid fa-plus"></i>
         </button>
         <input type="text" placeholder="Search hear" class="Search" />
-        <i class="fa-solid fa-circle-user"></i>
+        <button id="menuButton"><i class="fa-solid fa-circle-user"></i></button>
+        <div id="sideMenu" class="menu hidden">
+          <i class="fa-solid fa-circle-user"></i>
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="topics.html">Topics</a></li>
+            <li><a href="debate.html">Debate</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 

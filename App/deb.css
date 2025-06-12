@@ -119,6 +119,12 @@ input[type="search"] {
   line-height: 1.6;
 }
 
+#topicedt{
+  border: 2px solid black;
+  width: 20px;
+  text-align: justify;
+}
+
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
   .debattes {
@@ -136,9 +142,9 @@ input[type="search"] {
 
 /* Chat Section Styles */
 #chat {
-  margin: 2px 50px; /* You might want to adjust or remove horizontal margins */
+  margin: 2px 50px;
   position: fixed;
-  top: 10%; /* Adjust top as needed */
+  top: 10%; /* Adjust top */
   right: 0; /* Anchor to the right edge */
   background-color: #f4f4f9;
   width: 350px;

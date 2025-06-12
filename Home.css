@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 95px) {
+  body {
+    margin: 10px;
+  }
+
+  #Opinion{
+    margin: 0px;
+  }
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#36454F, #301934);
+}
+
+header{
+    height: 100px;
+    border: 1px solid #FBFBFB;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    text-align: center;
+}
+
+header img{
+    margin: 20px;
+    width: 60px;
+    height: 50px;
+}
+
+header a{
+    text-decoration: none;
+    color: #d8bfd8;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+header button{
+    width: auto;
+    height: 40px;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(#36454F, #023020);
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+header .item{
+    display: flex;
+    gap: 30px; /* spacing between links */
+    flex-grow: 1; /* takes up remaining space */
+    justify-content: center;
+}
+
+main div{
+    margin: 120px;
+}
+
+main h1{
+    font-weight: 900;
+}
+
+main div p{
+    margin-top: 12px;
+    font-weight: 900px;
+    color: #fbfbfb;
+}
+
+main div li{
+    margin-top: 12px;
+    font-weight: 900px;
+    color: #fbfbfb;
+}
+
+footer{
+    background: #53536b;
+}
+
+footer img{
+    height: 50px;
+    width: 50px;
+}
+
+footer div{
+    width: fit-content;
+}

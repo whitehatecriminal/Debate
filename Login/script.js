@@ -27,27 +27,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-    // Handle Login Logic
-    const loginForm = document.getElementById("loginForm");
-    if (loginForm) {
-        loginForm.addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the form from submitting
-
-            // Get the input values from the login form
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-
-            // Get stored user data from localStorage
-            const storedUser = JSON.parse(localStorage.getItem("user"));
-
-            // Check if user data exists and if login credentials match
-            if (storedUser && storedUser.username === username && storedUser.password === password) {
-                alert("Login successful!");
-                window.location.href = "debate.html"; // Redirect to a debate page (example)
-            } else {
-                alert("Invalid username or password.");
-            }
-        });
-    }
 });
